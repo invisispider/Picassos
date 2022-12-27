@@ -857,26 +857,16 @@ section {
 }
 
 /* Gallery Updates */
-.modal {
-  /* max-width: 100vw; */
-}
 .gal-img{
   cursor: pointer;
   border-radius: 0.3rem;
-  /* border: 1px solid white; */
   box-shadow: 2px 6px 8px 0 rgb(22 22 26 / 18%);
-  /* border: 1px solid rgb(223, 185, 186); */
 }
 .parallax{
-  /* Set a specific height */
-  /* min-height: 500px; */
   border-radius: 0.3rem;
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
-  /* border: 1px solid white; */
   box-shadow: 2px 6px 8px 0 rgb(22 22 26 / 18%);
 }
 .modal-content {
@@ -897,7 +887,6 @@ section {
   background-position: center center;
 }
 .modal-image {
-  align-content: center;
   justify-content: center;
   /* width: 100vw; */
   overflow: hidden;
@@ -915,12 +904,23 @@ section {
 .row {
   --bs-gutter-x: 2rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .modal {
+    --bs-modal-width: auto;
+  }
   .svg-arrow {
-    min-width: 2rem;
+    min-width: 3.5rem;
   }
   .modal-image img {
     /* width: auto; */
     /* max-width: 70vw; */
+  }
+}
+@media (max-width: 575px) {
+  .svg-arrow {
+    min-width: 2rem;
+  }
+  .modal-content {
+    height: 54vh;
   }
 }
